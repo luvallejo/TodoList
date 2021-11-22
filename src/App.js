@@ -27,7 +27,7 @@ function App(props) {
       if (id === task.id) {
         // use object spread to make a new object
         // whose `completed` prop has been inverted
-        return {...task, completed: !task.completed}
+        return {...task, completadas: !task.completed}
       }
       return task;
     });
@@ -75,12 +75,12 @@ function App(props) {
     />
   ));
 
-  const tasksNoun = taskList.length !== 1 ? 'tasks' : 'task';
-  const headingText = `${taskList.length} ${tasksNoun} remaining`;
+  const tasksNoun = taskList.length !== 1 ? 'tareas' : 'tarea';
+  const headingText = `Quedan ${taskList.length} ${tasksNoun}`;
   
   return (
     <div className="todoapp stack-large">
-      <h1>TodoMatic</h1>
+      <h1>Administrador de tareas</h1>
       <Form addTask={addTask} />
       <div className="filters btn-group stack-exception">
         {filterList}
